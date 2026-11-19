@@ -1,0 +1,79 @@
+# .gitignore — Portal Siantar Barat (CI4)
+# JANGAN commit file berikut ke repository
+
+# ==============================================================
+# 1. Kredensial & Environment — WAJIB DIEXCLUDE
+# ==============================================================
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.cert
+
+# ==============================================================
+# 2. Dependency — Di-install ulang dengan `composer install`
+# ==============================================================
+/vendor/
+
+# ==============================================================
+# 3. File sistem & cache CI4
+# ==============================================================
+/writable/cache/*
+/writable/logs/*
+/writable/session/*
+/writable/uploads/*
+/writable/debugbar/*
+/writable/backups/*
+!writable/cache/.gitkeep
+!writable/logs/.gitkeep
+!writable/session/.gitkeep
+!writable/uploads/.gitkeep
+
+# ==============================================================
+# 4. Database dump (berisi data warga — SENSITIF)
+# ==============================================================
+*.sql
+*.sql.gz
+database/backups/
+
+# ==============================================================
+# 5. Editor & OS
+# ==============================================================
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ==============================================================
+# 6. PHPUnit & Test artifacts
+# ==============================================================
+.phpunit.cache/
+coverage/
+
+# ==============================================================
+# 7. Script development lokal
+# ==============================================================
+scratch/
+_ci4_staging/
+import_*.php
+db_import.php
+setup_local.php
+*.bat
+
+# ==============================================================
+# 8. File log & temp & archives
+# ==============================================================
+*.log
+*.tmp
+*.bak
+*.swp
+*.zip
+
+# ==============================================================
+# 9. File aplikasi lokal
+# ==============================================================
+*.php-ini
+*.php-version
+*.user.ini
