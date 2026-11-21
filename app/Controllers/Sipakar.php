@@ -135,7 +135,7 @@ class Sipakar extends BasePortalController
             if ($fileObj === null || ! $fileObj->isValid()) {
                 continue;
             }
-            $res = $uploader->upload($fileObj, 'asset/sipakar/', ['pdf', 'jpg', 'jpeg', 'png'], 6144, true);
+            $res = $uploader->upload($fileObj, 'asset/sipakar/', ['pdf'], 2048, true);
             if ($res['ok']) {
                 $this->sipakar->insertDokumen([
                     'id_pengajuan'     => $idPengajuan,
@@ -234,8 +234,8 @@ class Sipakar extends BasePortalController
         $res = (new UploadService())->upload(
             $this->request->getFile('file_perbaikan'),
             'asset/sipakar/',
-            ['pdf', 'jpg', 'jpeg', 'png'],
-            6144,
+            ['pdf'],
+            2048,
             true
         );
 

@@ -321,7 +321,7 @@
                             </span>
                         </div>
                         <p style="font-size: 13px; color: #64748b; margin: 0 0 18px 0;">
-                            Format berkas yang didukung: <strong>PDF, JPG, PNG</strong>. Ukuran maksimum masing-masing berkas adalah <strong>6 MB</strong>. Pastikan pindaian (scan) jelas dan terbaca.
+                            Format berkas yang didukung: <strong>Wajib PDF (.pdf)</strong>. Ukuran maksimum masing-masing berkas adalah <strong>2 MB</strong>. Pastikan pindaian (scan) jelas dan terbaca.
                         </p>
 
                         <!-- DOKUMEN KHUSUS KGB (Kenaikan Gaji Berkala): 3 Pilihan Dokumen -->
@@ -334,8 +334,8 @@
                                     </label>
                                     <span class="badge" style="background: #fee2e2; color: #b91c1c; font-size: 10.5px; font-weight: 700;">Wajib</span>
                                 </div>
-                                <input type="file" name="dokumen_sk_pangkat" class="form-control-file" accept=".pdf,.jpg,.jpeg,.png" style="font-size: 13px; width: 100%; padding: 6px 0;">
-                                <small style="display: block; color: #64748b; margin-top: 4px; font-size: 11.5px;">Salinan sah Surat Keputusan (SK) Pangkat Terakhir.</small>
+                                <input type="file" name="dokumen_sk_pangkat" class="form-control-file input-sipakar-pdf" accept=".pdf,application/pdf" style="font-size: 13px; width: 100%; padding: 6px 0;">
+                                <small style="display: block; color: #64748b; margin-top: 4px; font-size: 11.5px;">Salinan sah SK Pangkat Terakhir (Wajib PDF, maks. 2 MB).</small>
                             </div>
 
                             <!-- 2. KGB Terakhir * -->
@@ -346,8 +346,8 @@
                                     </label>
                                     <span class="badge" style="background: #fee2e2; color: #b91c1c; font-size: 10.5px; font-weight: 700;">Wajib</span>
                                 </div>
-                                <input type="file" name="dokumen_kgb_terakhir" class="form-control-file" accept=".pdf,.jpg,.jpeg,.png" style="font-size: 13px; width: 100%; padding: 6px 0;">
-                                <small style="display: block; color: #64748b; margin-top: 4px; font-size: 11.5px;">Salinan sah Surat Keputusan Kenaikan Gaji Berkala (KGB) terakhir.</small>
+                                <input type="file" name="dokumen_kgb_terakhir" class="form-control-file input-sipakar-pdf" accept=".pdf,application/pdf" style="font-size: 13px; width: 100%; padding: 6px 0;">
+                                <small style="display: block; color: #64748b; margin-top: 4px; font-size: 11.5px;">Salinan sah SK Kenaikan Gaji Berkala terakhir (Wajib PDF, maks. 2 MB).</small>
                             </div>
 
                             <!-- 3. Dokumen Pendukung Lainnya -->
@@ -358,8 +358,8 @@
                                     </label>
                                     <span class="badge" style="background: #f1f5f9; color: #64748b; font-size: 10.5px;">Opsional</span>
                                 </div>
-                                <input type="file" name="dokumen_pendukung_kgb" class="form-control-file" accept=".pdf,.jpg,.jpeg,.png" style="font-size: 13px; width: 100%; padding: 6px 0;">
-                                <small style="display: block; color: #64748b; margin-top: 4px; font-size: 11.5px;">Karpeg/KPE, Ijazah, atau dokumen pendukung sah lainnya.</small>
+                                <input type="file" name="dokumen_pendukung_kgb" class="form-control-file input-sipakar-pdf" accept=".pdf,application/pdf" style="font-size: 13px; width: 100%; padding: 6px 0;">
+                                <small style="display: block; color: #64748b; margin-top: 4px; font-size: 11.5px;">Karpeg/KPE, Ijazah, atau berkas pendukung sah (Wajib PDF, maks. 2 MB).</small>
                             </div>
                         </div>
 
@@ -373,8 +373,8 @@
                                     </label>
                                     <span class="badge" style="background: #fee2e2; color: #b91c1c; font-size: 10.5px; font-weight: 700;">Wajib</span>
                                 </div>
-                                <input type="file" name="dokumen_sk_terakhir" class="form-control-file" accept=".pdf,.jpg,.jpeg,.png" style="font-size: 13px; width: 100%; padding: 6px 0;">
-                                <small style="display: block; color: #64748b; margin-top: 4px; font-size: 11.5px;">Salinan sah SK Pangkat atau SK KGB terakhir.</small>
+                                <input type="file" name="dokumen_sk_terakhir" class="form-control-file input-sipakar-pdf" accept=".pdf,application/pdf" style="font-size: 13px; width: 100%; padding: 6px 0;">
+                                <small style="display: block; color: #64748b; margin-top: 4px; font-size: 11.5px;">Salinan sah SK Pangkat atau SK KGB terakhir (Wajib PDF, maks. 2 MB).</small>
                             </div>
 
                             <!-- 2. SKP 1 Tahun Terakhir -->
@@ -385,8 +385,8 @@
                                     </label>
                                     <span class="badge" style="background: #fee2e2; color: #b91c1c; font-size: 10.5px; font-weight: 700;">Wajib</span>
                                 </div>
-                                <input type="file" name="dokumen_skp_1th" class="form-control-file" accept=".pdf,.jpg,.jpeg,.png" style="font-size: 13px; width: 100%; padding: 6px 0;">
-                                <small style="display: block; color: #64748b; margin-top: 4px; font-size: 11.5px;">Sasaran Kinerja Pegawai (SKP) / Penilaian Prestasi Kerja 1 tahun terakhir.</small>
+                                <input type="file" name="dokumen_skp_1th" class="form-control-file input-sipakar-pdf" accept=".pdf,application/pdf" style="font-size: 13px; width: 100%; padding: 6px 0;">
+                                <small style="display: block; color: #64748b; margin-top: 4px; font-size: 11.5px;">SKP / Penilaian Prestasi Kerja 1 tahun terakhir (Wajib PDF, maks. 2 MB).</small>
                             </div>
 
                             <!-- 3. SKP 2 Tahun Terakhir -->
@@ -397,8 +397,8 @@
                                     </label>
                                     <span class="badge" style="background: #fee2e2; color: #b91c1c; font-size: 10.5px; font-weight: 700;">Wajib</span>
                                 </div>
-                                <input type="file" name="dokumen_skp_2th" class="form-control-file" accept=".pdf,.jpg,.jpeg,.png" style="font-size: 13px; width: 100%; padding: 6px 0;">
-                                <small style="display: block; color: #64748b; margin-top: 4px; font-size: 11.5px;">Sasaran Kinerja Pegawai (SKP) / Penilaian Prestasi Kerja 2 tahun terakhir.</small>
+                                <input type="file" name="dokumen_skp_2th" class="form-control-file input-sipakar-pdf" accept=".pdf,application/pdf" style="font-size: 13px; width: 100%; padding: 6px 0;">
+                                <small style="display: block; color: #64748b; margin-top: 4px; font-size: 11.5px;">SKP / Penilaian Prestasi Kerja 2 tahun terakhir (Wajib PDF, maks. 2 MB).</small>
                             </div>
 
                             <!-- 4. SK Jabatan Struktural / Pelaksana -->
@@ -409,8 +409,8 @@
                                     </label>
                                     <span class="badge" style="background: #fee2e2; color: #b91c1c; font-size: 10.5px; font-weight: 700;">Wajib</span>
                                 </div>
-                                <input type="file" name="dokumen_sk_jabatan" class="form-control-file" accept=".pdf,.jpg,.jpeg,.png" style="font-size: 13px; width: 100%; padding: 6px 0;">
-                                <small style="display: block; color: #64748b; margin-top: 4px; font-size: 11.5px;">Surat Keputusan (SK) Jabatan Struktural atau Pelaksana saat ini.</small>
+                                <input type="file" name="dokumen_sk_jabatan" class="form-control-file input-sipakar-pdf" accept=".pdf,application/pdf" style="font-size: 13px; width: 100%; padding: 6px 0;">
+                                <small style="display: block; color: #64748b; margin-top: 4px; font-size: 11.5px;">SK Jabatan Struktural atau Pelaksana saat ini (Wajib PDF, maks. 2 MB).</small>
                             </div>
 
                             <!-- 5. Daftar Riwayat Jabatan -->
@@ -421,8 +421,8 @@
                                     </label>
                                     <span class="badge" style="background: #f1f5f9; color: #64748b; font-size: 10.5px;">Opsional</span>
                                 </div>
-                                <input type="file" name="dokumen_riwayat_jabatan" class="form-control-file" accept=".pdf,.jpg,.jpeg,.png" style="font-size: 13px; width: 100%; padding: 6px 0;">
-                                <small style="display: block; color: #64748b; margin-top: 4px; font-size: 11.5px;">Daftar riwayat jabatan / riwayat pekerjaan kepegawaian ASN.</small>
+                                <input type="file" name="dokumen_riwayat_jabatan" class="form-control-file input-sipakar-pdf" accept=".pdf,application/pdf" style="font-size: 13px; width: 100%; padding: 6px 0;">
+                                <small style="display: block; color: #64748b; margin-top: 4px; font-size: 11.5px;">Daftar riwayat jabatan ASN (Wajib PDF, maks. 2 MB).</small>
                             </div>
 
                             <!-- 6. Sertifikat Ujian Kompetensi -->
@@ -433,8 +433,8 @@
                                     </label>
                                     <span class="badge" style="background: #f1f5f9; color: #64748b; font-size: 10.5px;">Opsional</span>
                                 </div>
-                                <input type="file" name="dokumen_sertifikat_ukom" class="form-control-file" accept=".pdf,.jpg,.jpeg,.png" style="font-size: 13px; width: 100%; padding: 6px 0;">
-                                <small style="display: block; color: #64748b; margin-top: 4px; font-size: 11.5px;">Sertifikat Ujian Dinas / Ujian Kompetensi (Ukom) / Penyesuaian Ijazah.</small>
+                                <input type="file" name="dokumen_sertifikat_ukom" class="form-control-file input-sipakar-pdf" accept=".pdf,application/pdf" style="font-size: 13px; width: 100%; padding: 6px 0;">
+                                <small style="display: block; color: #64748b; margin-top: 4px; font-size: 11.5px;">Sertifikat Ujian Dinas / Ukom / PI (Wajib PDF, maks. 2 MB).</small>
                             </div>
 
                             <!-- 7. Dokumen Pendukung Lainnya -->
@@ -445,8 +445,8 @@
                                     </label>
                                     <span class="badge" style="background: #f1f5f9; color: #64748b; font-size: 10.5px;">Opsional</span>
                                 </div>
-                                <input type="file" name="dokumen_pendukung" class="form-control-file" accept=".pdf,.jpg,.jpeg,.png" style="font-size: 13px; width: 100%; padding: 6px 0;">
-                                <small style="display: block; color: #64748b; margin-top: 4px; font-size: 11.5px;">Ijazah legalisir, Transkrip Nilai, Karpeg/KPE, atau dokumen pendukung sah lainnya.</small>
+                                <input type="file" name="dokumen_pendukung" class="form-control-file input-sipakar-pdf" accept=".pdf,application/pdf" style="font-size: 13px; width: 100%; padding: 6px 0;">
+                                <small style="display: block; color: #64748b; margin-top: 4px; font-size: 11.5px;">Ijazah legalisir, Transkrip, Karpeg/KPE (Wajib PDF, maks. 2 MB).</small>
                             </div>
                         </div>
                     </div>
@@ -533,5 +533,63 @@ function updateSubJenis() {
         sub.appendChild(el);
     });
 }
-document.addEventListener('DOMContentLoaded', updateSubJenis);
+
+// Validasi Berkas: Wajib PDF (.pdf) & Maksimal 2 MB
+function initPdfValidation() {
+    var maxBytes = 2 * 1024 * 1024; // 2 MB
+    var fileInputs = document.querySelectorAll('.input-sipakar-pdf');
+
+    fileInputs.forEach(function(input) {
+        input.addEventListener('change', function() {
+            if (!this.files || this.files.length === 0) return;
+            var file = this.files[0];
+            var fileName = file.name;
+            var ext = fileName.split('.').pop().toLowerCase();
+
+            if (ext !== 'pdf' && file.type !== 'application/pdf') {
+                alert('PERINGATAN FORMAT BERKAS:\nBerkas "' + fileName + '" bukan format PDF.\n\nSemua berkas persyaratan SIPAKAR wajib berformat .pdf');
+                this.value = '';
+                return;
+            }
+
+            if (file.size > maxBytes) {
+                var sizeMb = (file.size / (1024 * 1024)).toFixed(2);
+                alert('PERINGATAN UKURAN BERKAS:\nBerkas "' + fileName + '" berukuran ' + sizeMb + ' MB.\n\nUkuran maksimal yang diizinkan adalah 2 MB. Silakan kompresi berkas PDF Anda terlebih dahulu.');
+                this.value = '';
+                return;
+            }
+        });
+    });
+
+    var form = document.getElementById('formSipakar');
+    if (form) {
+        form.addEventListener('submit', function(e) {
+            var activeInputs = form.querySelectorAll('.input-sipakar-pdf:not([disabled])');
+            for (var i = 0; i < activeInputs.length; i++) {
+                var inp = activeInputs[i];
+                if (inp.files && inp.files.length > 0) {
+                    var f = inp.files[0];
+                    var ext = f.name.split('.').pop().toLowerCase();
+                    if (ext !== 'pdf' && f.type !== 'application/pdf') {
+                        alert('Gagal Mengirim: Berkas "' + f.name + '" wajib berformat PDF (.pdf).');
+                        inp.focus();
+                        e.preventDefault();
+                        return false;
+                    }
+                    if (f.size > maxBytes) {
+                        alert('Gagal Mengirim: Berkas "' + f.name + '" melebihi batas ukuran maksimal 2 MB.');
+                        inp.focus();
+                        e.preventDefault();
+                        return false;
+                    }
+                }
+            }
+        });
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    updateSubJenis();
+    initPdfValidation();
+});
 </script>

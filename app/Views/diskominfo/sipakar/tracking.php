@@ -121,10 +121,10 @@
                                         <?= csrf_field(); ?>
                                         <input type="hidden" name="ticket" value="<?= htmlspecialchars($result['nomor_tiket']); ?>">
                                         <label style="font-size: 13px; font-weight: 700; color: #1e293b; margin-bottom: 6px; display: block;">
-                                            Unggah Dokumen Perbaikan (PDF / JPG max 6 MB):
+                                            Unggah Dokumen Perbaikan (Wajib PDF, maks. 2 MB):
                                         </label>
                                         <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-                                            <input type="file" name="file_perbaikan" class="form-control-file" accept=".pdf,.jpg,.jpeg,.png" required style="font-size: 13px; flex: 1;">
+                                            <input type="file" name="file_perbaikan" class="form-control-file" accept=".pdf,application/pdf" required style="font-size: 13px; flex: 1;" onchange="if(this.files[0] && (this.files[0].size > 2097152 || !this.files[0].name.toLowerCase().endsWith('.pdf'))){ alert('Dokumen perbaikan wajib berformat .pdf dan ukuran maksimal 2 MB!'); this.value=''; }">
                                             <button type="submit" class="btn btn-danger" style="border-radius: 8px; font-weight: 700; padding: 8px 20px; font-size: 13px;">
                                                 <i class="fas fa-upload mr-1"></i> Unggah Revisi Berkas
                                             </button>
