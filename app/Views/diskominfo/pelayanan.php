@@ -942,8 +942,8 @@ helper('portal');
                                                 <i class="fab fa-google-drive"></i>
                                             </div>
                                             <div class="waris-gdrive-info">
-                                                <div class="waris-gdrive-label">Berkas Formulir Persyaratan</div>
-                                                <div class="waris-gdrive-name">Format Berkas Ahli Waris (Google Drive)</div>
+                                                <div class="waris-gdrive-label">Contoh Surat & Formulir</div>
+                                                <div class="waris-gdrive-name">Contoh Surat Ahli Waris (Google Drive)</div>
                                                 <div class="waris-gdrive-meta">
                                                     <span class="waris-meta-badge" title="Statistik total unduhan dokumen">
                                                         <i class="fas fa-arrow-circle-down text-success"></i> 
@@ -956,8 +956,8 @@ helper('portal');
                                             </div>
                                         </div>
                                         <div class="waris-gdrive-actions">
-                                            <a href="<?= base_url('pelayanan/unduh-ahli-waris'); ?>" target="_blank" rel="noopener noreferrer" class="btn-waris-download" onclick="trackWarisDownload(event)" style="background: linear-gradient(135deg, #059669 0%, #047857 100%);" title="Unduh berkas persyaratan resmi di Google Drive">
-                                                <i class="fas fa-download"></i> Unduh Berkas Ahli Waris
+                                            <a href="<?= base_url('pelayanan/unduh-ahli-waris'); ?>" target="_blank" rel="noopener noreferrer" class="btn-waris-download" onclick="trackWarisDownload(event)" style="background: linear-gradient(135deg, #059669 0%, #047857 100%);" title="Lihat dan unduh contoh surat resmi di Google Drive">
+                                                <i class="fas fa-file-alt"></i> Contoh Surat Ahli Waris
                                             </a>
                                         </div>
                                     </div>
@@ -985,8 +985,8 @@ helper('portal');
                                                 <i class="fab fa-google-drive"></i>
                                             </div>
                                             <div class="waris-gdrive-info">
-                                                <div class="waris-gdrive-label">Berkas Formulir Persyaratan</div>
-                                                <div class="waris-gdrive-name">Format Penyerahan Hak Waris (Google Drive)</div>
+                                                <div class="waris-gdrive-label">Contoh Surat & Formulir</div>
+                                                <div class="waris-gdrive-name">Contoh Surat Penyerahan Hak Waris (Google Drive)</div>
                                                 <div class="waris-gdrive-meta">
                                                     <span class="waris-meta-badge" title="Statistik total unduhan dokumen">
                                                         <i class="fas fa-arrow-circle-down text-success"></i> 
@@ -999,8 +999,8 @@ helper('portal');
                                             </div>
                                         </div>
                                         <div class="waris-gdrive-actions">
-                                            <a href="<?= base_url('pelayanan/unduh-penyerahan-waris'); ?>" target="_blank" rel="noopener noreferrer" class="btn-waris-download" onclick="trackPenyerahanDownload(event)" style="background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);" title="Unduh berkas persyaratan resmi di Google Drive">
-                                                <i class="fas fa-download"></i> Unduh Berkas Penyerahan Waris
+                                            <a href="<?= base_url('pelayanan/unduh-penyerahan-waris'); ?>" target="_blank" rel="noopener noreferrer" class="btn-waris-download" onclick="trackPenyerahanDownload(event)" style="background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);" title="Lihat dan unduh contoh surat resmi di Google Drive">
+                                                <i class="fas fa-file-alt"></i> Contoh Surat Penyerahan Waris
                                             </a>
                                         </div>
                                     </div>
@@ -1028,8 +1028,8 @@ helper('portal');
                                                 <i class="fab fa-google-drive"></i>
                                             </div>
                                             <div class="waris-gdrive-info">
-                                                <div class="waris-gdrive-label">Berkas Formulir Persyaratan</div>
-                                                <div class="waris-gdrive-name">Format Surat Kuasa (Google Drive)</div>
+                                                <div class="waris-gdrive-label">Contoh Surat & Formulir</div>
+                                                <div class="waris-gdrive-name">Contoh Surat Kuasa (Google Drive)</div>
                                                 <div class="waris-gdrive-meta">
                                                     <span class="waris-meta-badge" title="Statistik total unduhan dokumen">
                                                         <i class="fas fa-arrow-circle-down text-success"></i> 
@@ -1042,8 +1042,8 @@ helper('portal');
                                             </div>
                                         </div>
                                         <div class="waris-gdrive-actions">
-                                            <a href="<?= base_url('pelayanan/unduh-surat-kuasa'); ?>" target="_blank" rel="noopener noreferrer" class="btn-waris-download" onclick="trackSuratKuasaDownload(event)" style="background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);" title="Unduh berkas persyaratan resmi di Google Drive">
-                                                <i class="fas fa-download"></i> Unduh Berkas Surat Kuasa
+                                            <a href="<?= base_url('pelayanan/unduh-surat-kuasa'); ?>" target="_blank" rel="noopener noreferrer" class="btn-waris-download" onclick="trackSuratKuasaDownload(event)" style="background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);" title="Lihat dan unduh contoh surat resmi di Google Drive">
+                                                <i class="fas fa-file-alt"></i> Contoh Surat Kuasa
                                             </a>
                                         </div>
                                     </div>
@@ -1073,8 +1073,8 @@ helper('portal');
                                                 <i class="fab fa-google-drive"></i>
                                             </div>
                                             <div class="waris-gdrive-info">
-                                                <div class="waris-gdrive-label">Berkas Formulir Persyaratan</div>
-                                                <div class="waris-gdrive-name">Format Berkas Surat Hibah (Google Drive)</div>
+                                                <div class="waris-gdrive-label">Contoh Surat & Formulir</div>
+                                                <div class="waris-gdrive-name">Contoh Surat Hibah (Google Drive)</div>
                                                 <div class="waris-gdrive-meta">
                                                     <span class="waris-meta-badge" title="Statistik total unduhan dokumen">
                                                         <i class="fas fa-arrow-circle-down text-success"></i> 
@@ -1087,8 +1087,8 @@ helper('portal');
                                             </div>
                                         </div>
                                         <div class="waris-gdrive-actions">
-                                            <a href="<?= base_url('pelayanan/unduh-surat-hibah'); ?>" target="_blank" rel="noopener noreferrer" class="btn-waris-download" onclick="trackSuratHibahDownload(event)" style="background: linear-gradient(135deg, #b45309 0%, #92400e 100%);" title="Unduh berkas persyaratan resmi di Google Drive">
-                                                <i class="fas fa-download"></i> Unduh Berkas Surat Hibah
+                                            <a href="<?= base_url('pelayanan/unduh-surat-hibah'); ?>" target="_blank" rel="noopener noreferrer" class="btn-waris-download" onclick="trackSuratHibahDownload(event)" style="background: linear-gradient(135deg, #b45309 0%, #92400e 100%);" title="Lihat dan unduh contoh surat resmi di Google Drive">
+                                                <i class="fas fa-file-alt"></i> Contoh Surat Hibah
                                             </a>
                                         </div>
                                     </div>
@@ -1173,38 +1173,38 @@ helper('portal');
                                         <i class="fas fa-camera text-success mr-1"></i> <strong>Keterangan:</strong> Layanan surat ahli waris wajib ada terlampir foto ahli waris saat penandatanganan surat.
                                     </div>
                                     <div style="margin-bottom: 10px;">
-                                        <a href="<?= base_url('pelayanan/unduh-ahli-waris'); ?>" target="_blank" rel="noopener noreferrer" class="btn-waris-download" onclick="trackWarisDownload(event)" style="width: 100%; justify-content: center; box-sizing: border-box;" title="Unduh berkas persyaratan resmi di Google Drive">
-                                            <i class="fab fa-google-drive"></i> Unduh Berkas Ahli Waris &bull; <span class="waris-hits-sync"><?= number_format((int) ($ahli_waris_download['hits'] ?? 0)); ?></span>x Diunduh
+                                        <a href="<?= base_url('pelayanan/unduh-ahli-waris'); ?>" target="_blank" rel="noopener noreferrer" class="btn-waris-download" onclick="trackWarisDownload(event)" style="width: 100%; justify-content: center; box-sizing: border-box;" title="Lihat dan unduh contoh surat di Google Drive">
+                                            <i class="fab fa-google-drive"></i> Contoh Surat Ahli Waris &bull; <span class="waris-hits-sync"><?= number_format((int) ($ahli_waris_download['hits'] ?? 0)); ?></span>x Diunduh
                                         </a>
                                     </div>
                                     <?php elseif ($layanan['id'] === 'penyerahan-hak-waris'): ?>
                                     <div style="margin-bottom: 10px;">
-                                        <a href="<?= base_url('pelayanan/unduh-penyerahan-waris'); ?>" target="_blank" rel="noopener noreferrer" class="btn-waris-download" onclick="trackPenyerahanDownload(event)" style="width: 100%; justify-content: center; box-sizing: border-box;" title="Unduh berkas persyaratan resmi di Google Drive">
-                                            <i class="fab fa-google-drive"></i> Unduh Berkas Penyerahan Waris &bull; <span class="penyerahan-hits-sync"><?= number_format((int) ($penyerahan_waris_download['hits'] ?? 0)); ?></span>x Diunduh
+                                        <a href="<?= base_url('pelayanan/unduh-penyerahan-waris'); ?>" target="_blank" rel="noopener noreferrer" class="btn-waris-download" onclick="trackPenyerahanDownload(event)" style="width: 100%; justify-content: center; box-sizing: border-box;" title="Lihat dan unduh contoh surat di Google Drive">
+                                            <i class="fab fa-google-drive"></i> Contoh Surat Penyerahan Waris &bull; <span class="penyerahan-hits-sync"><?= number_format((int) ($penyerahan_waris_download['hits'] ?? 0)); ?></span>x Diunduh
                                         </a>
                                     </div>
                                     <?php elseif ($layanan['id'] === 'surat-kuasa-waris'): ?>
                                     <div style="margin-bottom: 10px;">
-                                        <a href="<?= base_url('pelayanan/unduh-surat-kuasa'); ?>" target="_blank" rel="noopener noreferrer" class="btn-waris-download" onclick="trackSuratKuasaDownload(event)" style="width: 100%; justify-content: center; box-sizing: border-box; background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);" title="Unduh berkas persyaratan resmi di Google Drive">
-                                            <i class="fab fa-google-drive"></i> Unduh Berkas Surat Kuasa &bull; <span class="surat-kuasa-hits-sync"><?= number_format((int) ($surat_kuasa_download['hits'] ?? 0)); ?></span>x Diunduh
+                                        <a href="<?= base_url('pelayanan/unduh-surat-kuasa'); ?>" target="_blank" rel="noopener noreferrer" class="btn-waris-download" onclick="trackSuratKuasaDownload(event)" style="width: 100%; justify-content: center; box-sizing: border-box; background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);" title="Lihat dan unduh contoh surat di Google Drive">
+                                            <i class="fab fa-google-drive"></i> Contoh Surat Kuasa &bull; <span class="surat-kuasa-hits-sync"><?= number_format((int) ($surat_kuasa_download['hits'] ?? 0)); ?></span>x Diunduh
                                         </a>
                                     </div>
                                     <?php elseif ($layanan['id'] === 'hibah-tanah-bangunan'): ?>
                                     <div style="margin-bottom: 10px;">
-                                        <a href="<?= base_url('pelayanan/unduh-surat-hibah'); ?>" target="_blank" rel="noopener noreferrer" class="btn-waris-download" onclick="trackSuratHibahDownload(event)" style="width: 100%; justify-content: center; box-sizing: border-box; background: linear-gradient(135deg, #b45309 0%, #92400e 100%);" title="Unduh berkas persyaratan resmi di Google Drive">
-                                            <i class="fab fa-google-drive"></i> Unduh Berkas Surat Hibah &bull; <span class="surat-hibah-hits-sync"><?= number_format((int) ($surat_hibah_download['hits'] ?? 0)); ?></span>x Diunduh
+                                        <a href="<?= base_url('pelayanan/unduh-surat-hibah'); ?>" target="_blank" rel="noopener noreferrer" class="btn-waris-download" onclick="trackSuratHibahDownload(event)" style="width: 100%; justify-content: center; box-sizing: border-box; background: linear-gradient(135deg, #b45309 0%, #92400e 100%);" title="Lihat dan unduh contoh surat di Google Drive">
+                                            <i class="fab fa-google-drive"></i> Contoh Surat Hibah &bull; <span class="surat-hibah-hits-sync"><?= number_format((int) ($surat_hibah_download['hits'] ?? 0)); ?></span>x Diunduh
                                         </a>
                                     </div>
                                     <?php elseif ($layanan['id'] === 'surat-pindah'): ?>
                                     <div style="margin-bottom: 10px;">
-                                        <a href="<?= base_url('pelayanan/unduh-surat-pindah'); ?>" target="_blank" rel="noopener noreferrer" class="btn-waris-download" onclick="trackSuratPindahDownload(event)" style="width: 100%; justify-content: center; box-sizing: border-box; background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);" title="Unduh berkas persyaratan resmi di Google Drive">
-                                            <i class="fab fa-google-drive"></i> Unduh Berkas Surat Pindah &bull; <span class="surat-pindah-hits-sync"><?= number_format((int) ($surat_pindah_download['hits'] ?? 0)); ?></span>x Diunduh
+                                        <a href="<?= base_url('pelayanan/unduh-surat-pindah'); ?>" target="_blank" rel="noopener noreferrer" class="btn-waris-download" onclick="trackSuratPindahDownload(event)" style="width: 100%; justify-content: center; box-sizing: border-box; background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);" title="Lihat dan unduh contoh surat di Google Drive">
+                                            <i class="fab fa-google-drive"></i> Contoh Surat Pindah &bull; <span class="surat-pindah-hits-sync"><?= number_format((int) ($surat_pindah_download['hits'] ?? 0)); ?></span>x Diunduh
                                         </a>
                                     </div>
                                     <?php elseif ($layanan['id'] === 'nikah'): ?>
                                     <div style="margin-bottom: 10px;">
-                                        <a href="<?= base_url('pelayanan/unduh-dispensasi-nikah'); ?>" target="_blank" rel="noopener noreferrer" class="btn-waris-download" onclick="trackDispensasiNikahDownload(event)" style="width: 100%; justify-content: center; box-sizing: border-box; background: linear-gradient(135deg, #db2777 0%, #be185d 100%);" title="Unduh berkas persyaratan resmi di Google Drive">
-                                            <i class="fab fa-google-drive"></i> Unduh Berkas Dispensasi Nikah &bull; <span class="dispensasi-nikah-hits-sync"><?= number_format((int) ($dispensasi_nikah_download['hits'] ?? 0)); ?></span>x Diunduh
+                                        <a href="<?= base_url('pelayanan/unduh-dispensasi-nikah'); ?>" target="_blank" rel="noopener noreferrer" class="btn-waris-download" onclick="trackDispensasiNikahDownload(event)" style="width: 100%; justify-content: center; box-sizing: border-box; background: linear-gradient(135deg, #db2777 0%, #be185d 100%);" title="Lihat dan unduh contoh surat di Google Drive">
+                                            <i class="fab fa-google-drive"></i> Contoh Surat Dispensasi Nikah &bull; <span class="dispensasi-nikah-hits-sync"><?= number_format((int) ($dispensasi_nikah_download['hits'] ?? 0)); ?></span>x Diunduh
                                         </a>
                                     </div>
                                     <?php endif; ?>

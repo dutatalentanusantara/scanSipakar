@@ -227,7 +227,7 @@ class Pelayanan extends BasePortalController
         if ($ahliWarisDoc === null) {
             $ahliWarisDoc = [
                 'id_download' => 8,
-                'judul'       => 'Format Berkas Formulir Surat Pernyataan Ahli Waris',
+                'judul'       => 'Contoh Surat Pernyataan Ahli Waris',
                 'nama_file'   => 'https://drive.google.com/drive/folders/1IThAOn45xjfhLOPXgTg2lHQn_qix964s?usp=sharing',
                 'hits'        => 0,
             ];
@@ -241,7 +241,7 @@ class Pelayanan extends BasePortalController
         if ($penyerahanWarisDoc === null) {
             $penyerahanWarisDoc = [
                 'id_download' => 9,
-                'judul'       => 'Format Berkas Formulir Penyerahan Hak Waris',
+                'judul'       => 'Contoh Surat Penyerahan Hak Waris',
                 'nama_file'   => 'https://drive.google.com/drive/folders/1vPWAgGLelGxMGUmbgVitkGumtVfE3eAk?usp=sharing',
                 'hits'        => 0,
             ];
@@ -255,7 +255,7 @@ class Pelayanan extends BasePortalController
         if ($suratKuasaDoc === null) {
             $suratKuasaDoc = [
                 'id_download' => 10,
-                'judul'       => 'Format Berkas Formulir Surat Kuasa Ahli Waris',
+                'judul'       => 'Contoh Surat Kuasa Ahli Waris',
                 'nama_file'   => 'https://drive.google.com/drive/folders/1VOoMpKH1FIhCsP83iHOcCsXdI2SclX5B?usp=sharing',
                 'hits'        => 0,
             ];
@@ -269,7 +269,7 @@ class Pelayanan extends BasePortalController
         if ($suratHibahDoc === null) {
             $suratHibahDoc = [
                 'id_download' => 11,
-                'judul'       => 'Format Berkas Formulir Surat Hibah Tanah dan Bangunan',
+                'judul'       => 'Contoh Surat Hibah Tanah dan Bangunan',
                 'nama_file'   => 'https://drive.google.com/drive/folders/1MeXXnVbud8GF4n2wm9D_HiZAvlkBarcm?usp=sharing',
                 'hits'        => 0,
             ];
@@ -283,7 +283,7 @@ class Pelayanan extends BasePortalController
         if ($suratPindahDoc === null) {
             $suratPindahDoc = [
                 'id_download' => 12,
-                'judul'       => 'Format Berkas Formulir Surat Keterangan Pindah',
+                'judul'       => 'Contoh Surat Keterangan Pindah',
                 'nama_file'   => 'https://drive.google.com/drive/folders/1pQDNp4nnDx4iUIRWMhRQd4wdkOSGG_E8?usp=sharing',
                 'hits'        => 0,
             ];
@@ -297,7 +297,7 @@ class Pelayanan extends BasePortalController
         if ($dispensasiNikahDoc === null) {
             $dispensasiNikahDoc = [
                 'id_download' => 13,
-                'judul'       => 'Format Berkas Formulir Surat Dispensasi Nikah',
+                'judul'       => 'Contoh Surat Dispensasi Nikah',
                 'nama_file'   => 'https://drive.google.com/drive/folders/1NuRs_ROLcmlVEXdh-aOhEd92DV2eF1Eu?usp=sharing',
                 'hits'        => 0,
             ];
