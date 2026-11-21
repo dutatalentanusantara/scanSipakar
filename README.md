@@ -93,8 +93,36 @@ siantarbarat/
 ├── .gitignore
 ├── .gitattributes
 ├── composer.json
+├── Dockerfile           # Docker container image (PHP 8.3 Apache Debian Bookworm)
+├── docker-compose.yml   # Multi-container orchestration (App + MySQL 8.0)
+├── docker/              # Hardened php.ini and Apache VirtualHost
 └── deploy.ps1           # Script deployment Git + ZIP
 ```
+
+---
+
+## 🐳 Docker Deployment (Security Hardened)
+
+SIPAKAR menyediakan konfigurasi container produksi yang memenuhi standar keamanan Semgrep (SIP-03) berbasis **PHP 8.3 Apache Bookworm**:
+
+```bash
+# Build dan jalankan dengan Docker Compose
+docker compose up -d --build
+
+# Periksa status container & log
+docker compose ps
+docker compose logs -f app
+
+# Akses aplikasi
+# http://localhost:8080/siantarbarat/
+```
+
+### Standar Keamanan Docker (SIP-03 Compliant):
+- Base Image: `php:8.3-apache-bookworm` (Official Debian Bookworm, non-EOL, security supported hingga 2027)
+- Tidak menggunakan tag `latest` yang tidak terkontrol
+- Hardened PHP: `expose_php = Off`, `display_errors = Off`, `upload_max_filesize = 2M`
+- Perlindungan upload: Eksekusi script PHP dinonaktifkan pada direktori `writable/uploads` dan `asset/`
+- `.dockerignore` memfilter file kredensial `.env`, backup database `*.sql`, log, dan cache
 
 ---
 

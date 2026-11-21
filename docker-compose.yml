@@ -1,0 +1,58 @@
+# ==============================================================================
+# SIPAKAR Docker Compose — Production & Staging Orchestration
+# PHP 8.3 Apache + MySQL 8.0 with Isolated Bridge Network & Healthchecks
+# ==============================================================================
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: sipakar-app
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+    environment:
+      CI_ENVIRONMENT: production
+      app.baseURL: "http://localhost:8080/"
+      database.default.hostname: db
+      database.default.database: ${DB_DATABASE:-siantarbarat}
+      database.default.username: ${DB_USERNAME:-sipakar_user}
+      database.default.password: ${DB_PASSWORD:-sipakar_secret_2026}
+      database.default.DBDriver: MySQLi
+    volumes:
+      - sipakar-uploads:/var/www/html/writable/uploads
+      - sipakar-logs:/var/www/html/writable/logs
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - sipakar-net
+
+  db:
+    image: mysql:8.0-bookworm
+    container_name: sipakar-db
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD:-root_secure_pwd_2026}
+      MYSQL_DATABASE: ${DB_DATABASE:-siantarbarat}
+      MYSQL_USER: ${DB_USERNAME:-sipakar_user}
+      MYSQL_PASSWORD: ${DB_PASSWORD:-sipakar_secret_2026}
+    volumes:
+      - sipakar-dbdata:/var/lib/mysql
+    networks:
+      - sipakar-net
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+networks:
+  sipakar-net:
+    driver: bridge
+
+volumes:
+  sipakar-uploads:
+  sipakar-logs:
+  sipakar-dbdata:

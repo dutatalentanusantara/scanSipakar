@@ -1,0 +1,39 @@
+# Version Control
+.git/
+.gitignore
+.gitattributes
+
+# Environment & Sensitive Credentials
+.env
+.env.*
+!.env.example
+
+# Database Backups & SQL Dumps
+*.sql
+*.sql.gz
+*.bak
+*.zip
+siantarbarat.zip
+
+# Temporary, Cache & Log Files
+writable/cache/*
+!writable/cache/.gitkeep
+writable/logs/*
+!writable/logs/.gitkeep
+writable/session/*
+!writable/session/.gitkeep
+writable/debugbar/*
+
+# Development & Local Scripts
+deploy.ps1
+powershell.bat
+scratch/
+tests/
+phpunit.xml*
+.vscode/
+.idea/
+*.log
+
+# OS Specific
+.DS_Store
+Thumbs.db
