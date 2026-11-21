@@ -15,7 +15,7 @@ class Pelayanan extends BasePortalController
                 'warna'          => '#047857',
                 'judul'          => 'Surat Pernyataan Ahli Waris',
                 'deskripsi'      => 'Penetapan dan pengesahan resmi Surat Pernyataan Ahli Waris (Persyaratan Kelas Waris A) bagi keluarga pewaris yang sah di Kecamatan Siantar Barat.',
-                'waktu'          => '1 - 3 Hari Kerja',
+                'waktu'          => '30 Menit',
                 'biaya'          => 'GRATIS (Rp 0)',
                 'syarat'         => [
                     'Fotokopi KTP dan KK seluruh ahli waris',
@@ -38,7 +38,7 @@ class Pelayanan extends BasePortalController
                 'warna'          => '#0284c7',
                 'judul'          => 'Penyerahan Hak Waris',
                 'deskripsi'      => 'Pengurusan legalisasi dan administrasi Penyerahan Hak Waris (Persyaratan Kelas Waris B) atas kepemilikan tanah, bangunan, maupun aset keluarga.',
-                'waktu'          => '1 - 3 Hari Kerja',
+                'waktu'          => '30 Menit',
                 'biaya'          => 'GRATIS (Rp 0)',
                 'syarat'         => [
                     'Berkas ahli waris',
@@ -56,7 +56,7 @@ class Pelayanan extends BasePortalController
                 'warna'          => '#7c3aed',
                 'judul'          => 'Surat Kuasa Ahli Waris',
                 'deskripsi'      => 'Pengesahan Surat Kuasa Ahli Waris (Persyaratan Kelas Waris C) untuk penunjukan kuasa pengurusan rekening bank, tabungan, aset, atau hak waris.',
-                'waktu'          => '1 - 2 Hari Kerja',
+                'waktu'          => '30 Menit',
                 'biaya'          => 'GRATIS (Rp 0)',
                 'syarat'         => [
                     'Berkas ahli waris',
@@ -74,7 +74,7 @@ class Pelayanan extends BasePortalController
                 'warna'          => '#b45309',
                 'judul'          => 'Surat Hibah Tanah dan Bangunan',
                 'deskripsi'      => 'Rekomendasi dan pengesahan Surat Hibah Tanah dan Bangunan (Persyaratan Kelas Waris D) dari pemberi hibah kepada penerima hibah.',
-                'waktu'          => '2 - 3 Hari Kerja',
+                'waktu'          => '30 Menit',
                 'biaya'          => 'GRATIS (Rp 0)',
                 'syarat'         => [
                     'Berkas ahli waris',
@@ -95,7 +95,7 @@ class Pelayanan extends BasePortalController
                 'warna'          => '#8b5cf6',
                 'judul'          => 'Surat Keterangan Pindah Datang (SKPWNI)',
                 'deskripsi'      => 'Pengurusan perpindahan domisili kependudukan antar-kelurahan, antar-kecamatan, atau ke luar Kota Pematangsiantar.',
-                'waktu'          => '15 - 30 Menit',
+                'waktu'          => '30 Menit',
                 'biaya'          => 'GRATIS (Rp 0)',
                 'syarat'         => [
                     'Kartu Keluarga (KK) dan KTP-el asli pemohon',
@@ -113,7 +113,7 @@ class Pelayanan extends BasePortalController
                 'warna'          => '#db2777',
                 'judul'          => 'Rekomendasi / Dispensasi Nikah (N1-N4)',
                 'deskripsi'      => 'Penerbitan surat rekomendasi pernikahan ke Kantor Urusan Agama (KUA) atau Dinas Kependudukan dan Catatan Sipil.',
-                'waktu'          => '20 Menit',
+                'waktu'          => '30 Menit',
                 'biaya'          => 'GRATIS (Rp 0)',
                 'syarat'         => [
                     'Surat Keterangan untuk Nikah (Model N1 s/d N4) dari Kelurahan',
@@ -132,7 +132,7 @@ class Pelayanan extends BasePortalController
                 'warna'          => '#475569',
                 'judul'          => 'Legalisir Dokumen & Surat Resmi',
                 'deskripsi'      => 'Pengesahan dan stempel basah legalisir salinan surat atau dokumen yang dikeluarkan oleh pihak Kecamatan Siantar Barat.',
-                'waktu'          => '5 - 10 Menit',
+                'waktu'          => '30 Menit',
                 'biaya'          => 'GRATIS (Rp 0)',
                 'syarat'         => [
                     'Membawa dokumen asli untuk diverifikasi petugas',
