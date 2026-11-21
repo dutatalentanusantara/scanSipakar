@@ -316,7 +316,7 @@
                             <h4 style="font-size: 15.5px; font-weight: 700; color: #0f2b5c; margin: 0; display: flex; align-items: center; gap: 8px;">
                                 <i class="fas fa-file-upload text-primary"></i> 3. Unggah Berkas Persyaratan Digital
                             </h4>
-                            <span style="font-size: 12px; color: #64748b; background: #e2e8f0; padding: 3px 10px; border-radius: 20px; font-weight: 600;">
+                            <span id="doc_count_badge" style="font-size: 12px; color: #64748b; background: #e2e8f0; padding: 3px 10px; border-radius: 20px; font-weight: 600;">
                                 Total: 7 Berkas Persyaratan (4 Wajib, 3 Opsional)
                             </span>
                         </div>
@@ -324,8 +324,47 @@
                             Format berkas yang didukung: <strong>PDF, JPG, PNG</strong>. Ukuran maksimum masing-masing berkas adalah <strong>6 MB</strong>. Pastikan pindaian (scan) jelas dan terbaca.
                         </p>
 
-                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 18px;">
-                            
+                        <!-- DOKUMEN KHUSUS KGB (Kenaikan Gaji Berkala): 3 Pilihan Dokumen -->
+                        <div id="docs_kgb" style="display: none; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 18px;">
+                            <!-- 1. SK Pangkat * -->
+                            <div style="background: white; border: 1.5px solid #e2e8f0; border-radius: 12px; padding: 16px; transition: border-color .2s; box-shadow: 0 2px 6px rgba(0,0,0,0.02);">
+                                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+                                    <label style="font-size: 13.5px; font-weight: 700; color: #1e293b; margin: 0; display: flex; align-items: center; gap: 6px;">
+                                        <i class="fas fa-file-contract text-danger"></i> 1. SK Pangkat <span style="color: #ef4444;">*</span>
+                                    </label>
+                                    <span class="badge" style="background: #fee2e2; color: #b91c1c; font-size: 10.5px; font-weight: 700;">Wajib</span>
+                                </div>
+                                <input type="file" name="dokumen_sk_pangkat" class="form-control-file" accept=".pdf,.jpg,.jpeg,.png" style="font-size: 13px; width: 100%; padding: 6px 0;">
+                                <small style="display: block; color: #64748b; margin-top: 4px; font-size: 11.5px;">Salinan sah Surat Keputusan (SK) Pangkat Terakhir.</small>
+                            </div>
+
+                            <!-- 2. KGB Terakhir * -->
+                            <div style="background: white; border: 1.5px solid #e2e8f0; border-radius: 12px; padding: 16px; transition: border-color .2s; box-shadow: 0 2px 6px rgba(0,0,0,0.02);">
+                                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+                                    <label style="font-size: 13.5px; font-weight: 700; color: #1e293b; margin: 0; display: flex; align-items: center; gap: 6px;">
+                                        <i class="fas fa-file-invoice-dollar text-success"></i> 2. KGB Terakhir <span style="color: #ef4444;">*</span>
+                                    </label>
+                                    <span class="badge" style="background: #fee2e2; color: #b91c1c; font-size: 10.5px; font-weight: 700;">Wajib</span>
+                                </div>
+                                <input type="file" name="dokumen_kgb_terakhir" class="form-control-file" accept=".pdf,.jpg,.jpeg,.png" style="font-size: 13px; width: 100%; padding: 6px 0;">
+                                <small style="display: block; color: #64748b; margin-top: 4px; font-size: 11.5px;">Salinan sah Surat Keputusan Kenaikan Gaji Berkala (KGB) terakhir.</small>
+                            </div>
+
+                            <!-- 3. Dokumen Pendukung Lainnya -->
+                            <div style="background: white; border: 1.5px dashed #cbd5e1; border-radius: 12px; padding: 16px; transition: border-color .2s;">
+                                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+                                    <label style="font-size: 13.5px; font-weight: 700; color: #334155; margin: 0; display: flex; align-items: center; gap: 6px;">
+                                        <i class="fas fa-paperclip text-muted"></i> 3. Dokumen Pendukung Lainnya
+                                    </label>
+                                    <span class="badge" style="background: #f1f5f9; color: #64748b; font-size: 10.5px;">Opsional</span>
+                                </div>
+                                <input type="file" name="dokumen_pendukung_kgb" class="form-control-file" accept=".pdf,.jpg,.jpeg,.png" style="font-size: 13px; width: 100%; padding: 6px 0;">
+                                <small style="display: block; color: #64748b; margin-top: 4px; font-size: 11.5px;">Karpeg/KPE, Ijazah, atau dokumen pendukung sah lainnya.</small>
+                            </div>
+                        </div>
+
+                        <!-- DOKUMEN KHUSUS KP (Kenaikan Pangkat): 7 Pilihan Dokumen Lengkap -->
+                        <div id="docs_kp" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 18px;">
                             <!-- 1. SK Pangkat / KGB Terakhir -->
                             <div style="background: white; border: 1.5px solid #e2e8f0; border-radius: 12px; padding: 16px; transition: border-color .2s; box-shadow: 0 2px 6px rgba(0,0,0,0.02);">
                                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
@@ -334,7 +373,7 @@
                                     </label>
                                     <span class="badge" style="background: #fee2e2; color: #b91c1c; font-size: 10.5px; font-weight: 700;">Wajib</span>
                                 </div>
-                                <input type="file" name="dokumen_sk_terakhir" class="form-control-file" accept=".pdf,.jpg,.jpeg,.png" required style="font-size: 13px; width: 100%; padding: 6px 0;">
+                                <input type="file" name="dokumen_sk_terakhir" class="form-control-file" accept=".pdf,.jpg,.jpeg,.png" style="font-size: 13px; width: 100%; padding: 6px 0;">
                                 <small style="display: block; color: #64748b; margin-top: 4px; font-size: 11.5px;">Salinan sah SK Pangkat atau SK KGB terakhir.</small>
                             </div>
 
@@ -346,7 +385,7 @@
                                     </label>
                                     <span class="badge" style="background: #fee2e2; color: #b91c1c; font-size: 10.5px; font-weight: 700;">Wajib</span>
                                 </div>
-                                <input type="file" name="dokumen_skp_1th" class="form-control-file" accept=".pdf,.jpg,.jpeg,.png" required style="font-size: 13px; width: 100%; padding: 6px 0;">
+                                <input type="file" name="dokumen_skp_1th" class="form-control-file" accept=".pdf,.jpg,.jpeg,.png" style="font-size: 13px; width: 100%; padding: 6px 0;">
                                 <small style="display: block; color: #64748b; margin-top: 4px; font-size: 11.5px;">Sasaran Kinerja Pegawai (SKP) / Penilaian Prestasi Kerja 1 tahun terakhir.</small>
                             </div>
 
@@ -358,7 +397,7 @@
                                     </label>
                                     <span class="badge" style="background: #fee2e2; color: #b91c1c; font-size: 10.5px; font-weight: 700;">Wajib</span>
                                 </div>
-                                <input type="file" name="dokumen_skp_2th" class="form-control-file" accept=".pdf,.jpg,.jpeg,.png" required style="font-size: 13px; width: 100%; padding: 6px 0;">
+                                <input type="file" name="dokumen_skp_2th" class="form-control-file" accept=".pdf,.jpg,.jpeg,.png" style="font-size: 13px; width: 100%; padding: 6px 0;">
                                 <small style="display: block; color: #64748b; margin-top: 4px; font-size: 11.5px;">Sasaran Kinerja Pegawai (SKP) / Penilaian Prestasi Kerja 2 tahun terakhir.</small>
                             </div>
 
@@ -370,7 +409,7 @@
                                     </label>
                                     <span class="badge" style="background: #fee2e2; color: #b91c1c; font-size: 10.5px; font-weight: 700;">Wajib</span>
                                 </div>
-                                <input type="file" name="dokumen_sk_jabatan" class="form-control-file" accept=".pdf,.jpg,.jpeg,.png" required style="font-size: 13px; width: 100%; padding: 6px 0;">
+                                <input type="file" name="dokumen_sk_jabatan" class="form-control-file" accept=".pdf,.jpg,.jpeg,.png" style="font-size: 13px; width: 100%; padding: 6px 0;">
                                 <small style="display: block; color: #64748b; margin-top: 4px; font-size: 11.5px;">Surat Keputusan (SK) Jabatan Struktural atau Pelaksana saat ini.</small>
                             </div>
 
@@ -409,7 +448,6 @@
                                 <input type="file" name="dokumen_pendukung" class="form-control-file" accept=".pdf,.jpg,.jpeg,.png" style="font-size: 13px; width: 100%; padding: 6px 0;">
                                 <small style="display: block; color: #64748b; margin-top: 4px; font-size: 11.5px;">Ijazah legalisir, Transkrip Nilai, Karpeg/KPE, atau dokumen pendukung sah lainnya.</small>
                             </div>
-
                         </div>
                     </div>
 
@@ -439,9 +477,25 @@
 </div>
 
 <script>
+function toggleContainerInputs(container, enable, requiredNames) {
+    if (!container) return;
+    var inputs = container.querySelectorAll('input[type="file"]');
+    inputs.forEach(function(input) {
+        input.disabled = !enable;
+        if (enable && requiredNames.indexOf(input.name) !== -1) {
+            input.setAttribute('required', 'required');
+        } else {
+            input.removeAttribute('required');
+        }
+    });
+}
+
 function updateSubJenis() {
     var jenis = document.getElementById('jenis_layanan').value;
     var sub = document.getElementById('sub_jenis');
+    var docsKgb = document.getElementById('docs_kgb');
+    var docsKp = document.getElementById('docs_kp');
+    var docBadge = document.getElementById('doc_count_badge');
     sub.innerHTML = '';
 
     if (jenis === 'KP') {
@@ -452,12 +506,24 @@ function updateSubJenis() {
             'Kenaikan Pangkat Penyesuaian Ijazah (PI)',
             'Kenaikan Pangkat Anumerta / Pengabdian'
         ];
+        if (docBadge) docBadge.textContent = 'Total: 7 Berkas Persyaratan (4 Wajib, 3 Opsional)';
+        if (docsKp) docsKp.style.display = 'grid';
+        if (docsKgb) docsKgb.style.display = 'none';
+
+        toggleContainerInputs(docsKp, true, ['dokumen_sk_terakhir', 'dokumen_skp_1th', 'dokumen_skp_2th', 'dokumen_sk_jabatan']);
+        toggleContainerInputs(docsKgb, false, []);
     } else {
         var options = [
             'Kenaikan Gaji Berkala 2 Tahunan (Reguler)',
             'Kenaikan Gaji Berkala Pertama CPNS ke PNS',
             'Penyesuaian Kenaikan Gaji Berkala Susulan'
         ];
+        if (docBadge) docBadge.textContent = 'Total: 3 Berkas Persyaratan (2 Wajib, 1 Opsional)';
+        if (docsKgb) docsKgb.style.display = 'grid';
+        if (docsKp) docsKp.style.display = 'none';
+
+        toggleContainerInputs(docsKgb, true, ['dokumen_sk_pangkat', 'dokumen_kgb_terakhir']);
+        toggleContainerInputs(docsKp, false, []);
     }
 
     options.forEach(function(opt) {

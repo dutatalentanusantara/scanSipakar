@@ -115,12 +115,15 @@ class Sipakar extends BasePortalController
 
         $docKeys = [
             'dokumen_sk_terakhir'     => 'SK Pangkat / KGB Terakhir',
+            'dokumen_sk_pangkat'      => 'SK Pangkat',
+            'dokumen_kgb_terakhir'    => 'KGB Terakhir',
             'dokumen_skp_1th'         => 'SKP 1 Tahun Terakhir',
             'dokumen_skp_2th'         => 'SKP 2 Tahun Terakhir',
             'dokumen_sk_jabatan'      => 'SK Jabatan Struktural / Pelaksana',
             'dokumen_riwayat_jabatan' => 'Daftar Riwayat Jabatan',
             'dokumen_sertifikat_ukom' => 'Sertifikat Ujian Kompetensi',
             'dokumen_pendukung'       => 'Dokumen Pendukung Lainnya',
+            'dokumen_pendukung_kgb'   => 'Dokumen Pendukung Lainnya',
             // Fallback backward compatibility for legacy field names
             'dokumen_skp'             => 'Penilaian Kinerja / SKP 2 Tahun Terakhir',
             'dokumen_pengantar'       => 'Surat Pengantar dari Kepala Unit Kerja',
