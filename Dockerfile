@@ -72,7 +72,7 @@ RUN mkdir -p /var/www/html/writable/cache \
     && find /var/www/html -type d -exec chmod 755 {} \; \
     && find /var/www/html -type f -exec chmod 644 {} \; \
     && chmod -R 775 /var/www/html/writable \
-    && chmod +x /var/www/html/spark
+    && ([ ! -f /var/www/html/spark ] || chmod +x /var/www/html/spark)
 
 # 8. Expose HTTP port
 EXPOSE 80

@@ -95,8 +95,7 @@ siantarbarat/
 ├── composer.json
 ├── Dockerfile           # Docker container image (PHP 8.3 Apache Debian Bookworm)
 ├── docker-compose.yml   # Multi-container orchestration (App + MySQL 8.0)
-├── docker/              # Hardened php.ini and Apache VirtualHost
-└── deploy.ps1           # Script deployment Git + ZIP
+└── docker/              # Hardened php.ini and Apache VirtualHost
 ```
 
 ---
@@ -123,26 +122,6 @@ docker compose logs -f app
 - Hardened PHP: `expose_php = Off`, `display_errors = Off`, `upload_max_filesize = 2M`
 - Perlindungan upload: Eksekusi script PHP dinonaktifkan pada direktori `writable/uploads` dan `asset/`
 - `.dockerignore` memfilter file kredensial `.env`, backup database `*.sql`, log, dan cache
-
----
-
-## 📦 Deploy
-
-Gunakan script `deploy.ps1` (PowerShell, Windows):
-
-```powershell
-# Git push + buat ZIP sekaligus
-.\deploy.ps1
-
-# Hanya git push dengan pesan custom
-.\deploy.ps1 -Mode git -Msg "feat: update halaman pelayanan"
-
-# Hanya buat ZIP export
-.\deploy.ps1 -Mode zip
-
-# Simulasi (tanpa eksekusi)
-.\deploy.ps1 -DryRun
-```
 
 ---
 
