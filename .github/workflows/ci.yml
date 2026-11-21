@@ -1,0 +1,61 @@
+name: CI & Security Quality Gate
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  lint:
+    name: PHP 8.3 Syntax & Lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup PHP 8.3
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          extensions: mbstring, intl, gd, xml, zip, mysqli, pdo, pdo_mysql, fileinfo, opcache
+          coverage: none
+
+      - name: Validate PHP Syntax (Lint)
+        run: |
+          echo "Linting PHP codebase..."
+          find app/ -type f -name "*.php" -print0 | xargs -0 -n 1 -P 4 php -l > /dev/null
+          php -l index.php
+          php -l preload.php
+          echo "All PHP files passed syntax checks successfully."
+
+  docker-security:
+    name: Docker Build & Container Verification
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build Production Image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          file: ./Dockerfile
+          push: false
+          tags: sipakar:ci-check
+          load: true
+
+      - name: Verify Container Runtime & PHP Version
+        run: |
+          echo "Verifying container PHP version..."
+          docker run --rm sipakar:ci-check php -v
+          docker run --rm sipakar:ci-check php -m
+          echo "Verifying Apache configuration syntax..."
+          docker run --rm sipakar:ci-check apache2ctl -t

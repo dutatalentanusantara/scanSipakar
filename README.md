@@ -2,9 +2,11 @@
 
 > **Portal Resmi Pemerintah Kecamatan Siantar Barat** — Layanan Administrasi Warga, Siap1Pintu, Ahli Waris, SIPAKAR
 
-[![PHP](https://img.shields.io/badge/PHP-8.3-blue)](https://php.net)
-[![CodeIgniter](https://img.shields.io/badge/CodeIgniter-4.7-EF4223)](https://codeigniter.com)
-[![MySQL](https://img.shields.io/badge/MySQL-8.0-orange)](https://mysql.com)
+[![CI & Security Quality Gate](https://github.com/boimanalu/sipakar/actions/workflows/ci.yml/badge.svg)](https://github.com/boimanalu/sipakar/actions/workflows/ci.yml)
+[![PHP](https://img.shields.io/badge/PHP-8.3%2B-777BB4?logo=php&logoColor=white)](https://php.net)
+[![CodeIgniter](https://img.shields.io/badge/CodeIgniter-4.7-EF4223?logo=codeigniter&logoColor=white)](https://codeigniter.com)
+[![Docker](https://img.shields.io/badge/Docker-PHP%208.3%20Bookworm-2496ED?logo=docker&logoColor=white)](Dockerfile)
+[![Security Policy](https://img.shields.io/badge/Security-Hardened-success?logo=shield&logoColor=white)](SECURITY.md)
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 
 ---
