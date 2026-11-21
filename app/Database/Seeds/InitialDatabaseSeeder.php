@@ -14,20 +14,42 @@ class InitialDatabaseSeeder extends Seeder
     {
         $db = $this->db;
 
-        // 1. Ensure default administrator account exists with secure bcrypt
-        $admin = $db->table('users')->where('username', 'admin')->get()->getRowArray();
-        if ($admin === null) {
-            $db->table('users')->insert([
-                'username'     => 'admin',
-                'password'     => '$2y$10$/pFKq4vRjl.g84K7Na7mleN.RYk61YZe7JTwXF.why0ZDSl46AiDO', // admin123
-                'nama_lengkap' => 'Administrator Siantar Barat',
-                'email'        => 'admin@siantarbarat.pematangsiantar.go.id',
-                'no_telp'      => '081234567890',
-                'foto'         => '',
-                'level'        => 'admin',
-                'blokir'       => 'N',
-                'id_session'   => 'admin-session-init-2026',
-            ]);
+        // 1. Provision initial administrator account only if explicitly configured via environment
+        // and no administrator account currently exists in the system.
+        $existingAdmin = $db->table('users')
+            ->groupStart()
+                ->where('username', 'admin')
+                ->orWhere('level', 'admin')
+            ->groupEnd()
+            ->get()
+            ->getRowArray();
+
+        if ($existingAdmin === null) {
+            // Retrieve configuration safely from environment variables (SIP-02 Compliance)
+            $initialPassword = env('INITIAL_ADMIN_PASSWORD');
+
+            // Do NOT create an account with default/hardcoded credentials if INITIAL_ADMIN_PASSWORD is not set
+            if (! empty($initialPassword) && is_string($initialPassword)) {
+                $initialUsername = (string) (env('INITIAL_ADMIN_USERNAME') ?: 'admin');
+                $initialName     = (string) (env('INITIAL_ADMIN_NAME') ?: 'Administrator Siantar Barat');
+                $initialEmail    = (string) (env('INITIAL_ADMIN_EMAIL') ?: 'admin@siantarbarat.pematangsiantar.go.id');
+                $initialPhone    = (string) (env('INITIAL_ADMIN_PHONE') ?: '081234567890');
+
+                // Hash password dynamically at runtime using PHP native PASSWORD_DEFAULT (compatible with PHP 8)
+                $passwordHash = password_hash($initialPassword, PASSWORD_DEFAULT);
+
+                $db->table('users')->insert([
+                    'username'     => $initialUsername,
+                    'password'     => $passwordHash,
+                    'nama_lengkap' => $initialName,
+                    'email'        => $initialEmail,
+                    'no_telp'      => $initialPhone,
+                    'foto'         => '',
+                    'level'        => 'admin',
+                    'blokir'       => 'N',
+                    'id_session'   => bin2hex(random_bytes(16)),
+                ]);
+            }
         }
 
         // 2. Ensure default website identity exists
