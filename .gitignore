@@ -36,6 +36,7 @@
 *.sql
 *.sql.gz
 database/backups/
+!database/schema.sql.example
 
 # ==============================================================
 # 5. Editor & OS

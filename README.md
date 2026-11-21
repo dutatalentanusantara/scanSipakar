@@ -35,36 +35,44 @@ Portal resmi informasi dan layanan publik Kecamatan Siantar Barat, Kota Pematang
 
 ---
 
-## 🚀 Instalasi Lokal
+## 🚀 Instalasi & Menjalankan di Localhost
+
+> 📖 **Panduan Lengkap & Multi-Platform**: Baca panduan mendalam untuk Laragon, XAMPP, Native PHP, dan Docker di [**`docs/BUILD_AND_RUN.md`**](docs/BUILD_AND_RUN.md).
 
 ### 1. Clone repository
 ```bash
-git clone https://github.com/boimanalu/sipakar.git
-cd sipakar
+git clone https://github.com/boimanalu/sipakar.git siantarbarat
+cd siantarbarat
 ```
 
 ### 2. Install dependencies
 ```bash
-composer install
+composer install --no-dev --optimize-autoloader
 ```
 
 ### 3. Konfigurasi environment
 ```bash
 cp .env.example .env
-# Edit .env: sesuaikan database dan baseURL
+# Edit .env: sesuaikan database, baseURL, dan INITIAL_ADMIN_PASSWORD
 ```
 
 ### 4. Buat database & import skema
-```sql
-CREATE DATABASE siantarbarat CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
--- Import: sql_siantarbarat.sql (tersedia terpisah, tidak disertakan di repo)
+```bash
+# 1. Buat database di MySQL
+mysql -u root -e "CREATE DATABASE siantarbarat CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;"
+
+# 2. Import skema template bawaan
+mysql -u root siantarbarat < database/schema.sql.example
+
+# 3. Jalankan seeder akun awal administrator (SIP-02 Compliant)
+php spark db:seed InitialDatabaseSeeder
 ```
 
 ### 5. Jalankan server
-```bash
-# Laragon: aktifkan Apache + MySQL, buka http://localhost/siantarbarat/
-php spark serve  # atau gunakan Laragon
-```
+- **Laragon**: Aktifkan Apache + MySQL, buka `http://localhost/siantarbarat/`
+- **XAMPP**: Jalankan Apache + MySQL, buka `http://localhost/siantarbarat/`
+- **PHP Built-in Server**: `php spark serve --port 8080`
+- **Docker Compose**: `docker compose up -d --build` (Akses di `http://localhost:8080/siantarbarat/`)
 
 ---
 
