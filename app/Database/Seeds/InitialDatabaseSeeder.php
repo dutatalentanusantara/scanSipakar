@@ -3,6 +3,13 @@
 namespace App\Database\Seeds;
 
 use CodeIgniter\Database\Seeder;
+use Throwable;
+use function bin2hex;
+use function date;
+use function env;
+use function is_string;
+use function password_hash;
+use function random_bytes;
 
 /**
  * CI4 Database Seeder for Portal Kecamatan Siantar Barat.
@@ -38,6 +45,12 @@ class InitialDatabaseSeeder extends Seeder
                 // Hash password dynamically at runtime using PHP native PASSWORD_DEFAULT (compatible with PHP 8)
                 $passwordHash = password_hash($initialPassword, PASSWORD_DEFAULT);
 
+                try {
+                    $sessionId = \bin2hex(\random_bytes(16));
+                } catch (Throwable) {
+                    $sessionId = \md5(\uniqid((string) \mt_rand(), true));
+                }
+
                 $db->table('users')->insert([
                     'username'     => $initialUsername,
                     'password'     => $passwordHash,
@@ -47,7 +60,7 @@ class InitialDatabaseSeeder extends Seeder
                     'foto'         => '',
                     'level'        => 'admin',
                     'blokir'       => 'N',
-                    'id_session'   => bin2hex(random_bytes(16)),
+                    'id_session'   => $sessionId,
                 ]);
             }
         }
